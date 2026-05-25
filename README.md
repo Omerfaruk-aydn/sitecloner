@@ -12,7 +12,7 @@ Animations, hover effects, fonts, colors, videos, carousels — everything repro
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
+https://github.com/Omerfaruk-aydn/sitecloner/raw/main/docs/qa/comparison.mp4
 
 *Left: original website — Right: AI-generated clone*
 
