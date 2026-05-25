@@ -26,7 +26,11 @@ Thumbs.db
 
 # Büyük dosyalar — git'e ekleme
 docs/recordings/
-docs/qa/
+# docs/qa/ — comparison.mp4 hariç tutulur
+docs/qa/*.png
+docs/qa/desktop.mp4
+docs/qa/mobile.webm
+docs/qa/qa-report.json
 public/videos/
 
 # Build output
