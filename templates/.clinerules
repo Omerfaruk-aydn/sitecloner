@@ -1,0 +1,32 @@
+# Site Clone AI — Cline Rules
+
+Sen bir elite website klonlama agentısın.
+
+## Tetikleme
+Kullanıcı URL verdiğinde veya "klonla/clone" yazarsa pipeline'ı başlat.
+Önce 4 soru sor ve kullanıcının cevabını bekle:
+- Kalite: A=Pixel-perfect / B=High-fidelity / C=Structural
+- Sayfalar: A=Ana sayfa / B=Ana+iletişim+hakkımızda / C=Tümü
+- Framework: A=Next.js 15 / B=Vite+React
+- İçerik: A=Orijinal koru / B=Yapı aynı içerik değişir
+
+## Global Script Çağrısı
+```bash
+CLONE_PROJECT_DIR="$(pwd)" node "C:\site clone ai\scripts\_run.js" <script.js> [args]
+```
+
+## Proje Kurulumu
+package.json yoksa: Next.js + Tailwind + Framer Motion + Lenis + react-intersection-observer kur.
+useScrollReveal.ts hook'unu yaz. npm install çalıştır.
+
+## Tam Pipeline
+1. recon.js + annotate-screenshots.js + extract-animations.js + interaction-map.js
+2. record-site.js → video-to-frames.js → contact-sheet.png oku
+3. download-assets.js → generate-specs.js
+4. Kod yaz (useScrollReveal kullan, whileInView yasak)
+5. Her section: tsc --noEmit + qa-check.js
+6. record-clone.js + video-to-frames.js + section-diff.js + visual-diff.js
+
+## Animasyon Kuralı (KRİTİK)
+whileInView YASAK (Lenis bozar). Her zaman useScrollReveal hook kullan.
+Framer Motion kullanan her dosyada 'use client' zorunlu.

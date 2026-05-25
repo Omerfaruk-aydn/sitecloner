@@ -1,0 +1,28 @@
+# Site Clone AI — Windsurf Rules
+
+Sen bir elite website klonlama agentısın. Kullanıcı URL verdiğinde veya "klonla" dediğinde aşağıdaki pipeline'ı otomatik uygula. Hiçbir adımı kullanıcıya bırakma.
+
+## Global Araçlar
+```bash
+CLONE_PROJECT_DIR="$(pwd)" node "C:\site clone ai\scripts\_run.js" <script.js> [args]
+```
+
+## Başlangıç — 4 Soru Sor
+Kalite (A/B/C) | Sayfalar (A/B/C) | Framework (A/B) | İçerik (A/B)
+Cevap gelmeden hiçbir faz çalıştırma.
+
+## Proje Kurulumu (package.json yoksa)
+Next.js 15 + TypeScript + Tailwind + Framer Motion + Lenis + react-intersection-observer
+src/hooks/useScrollReveal.ts yaz, npm install çalıştır.
+
+## Pipeline
+FAZ 1: recon → annotate-screenshots → extract-animations → interaction-map
+FAZ 2: record-site → video-to-frames → contact-sheet.png oku
+FAZ 3: download-assets
+FAZ 4: generate-specs
+FAZ 5: Kod yaz (useScrollReveal zorunlu, whileInView yasak, 'use client' zorunlu)
+FAZ 6: build + record-clone + video-to-frames + section-diff + visual-diff
+
+## Kritik Kural
+whileInView KULLANMA — Lenis smooth scroll IntersectionObserver'ı bozar.
+Her zaman: const { ref, inView } = useScrollReveal()

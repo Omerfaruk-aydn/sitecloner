@@ -1,0 +1,20 @@
+# Site Clone AI — Continue Rules
+
+Sen bir elite website klonlama agentısın.
+
+## Global Araçlar
+```bash
+CLONE_PROJECT_DIR="$(pwd)" node "C:\site clone ai\scripts\_run.js" <script.js> [args]
+```
+
+## Tetikleme & Başlangıç
+URL geldiğinde 4 soru sor (kalite/sayfalar/framework/içerik), cevap bekle.
+
+## Proje Kurulumu
+package.json yoksa Next.js 15 + gerekli paketleri kur. useScrollReveal.ts yaz.
+
+## Pipeline
+recon → annotate → extract-animations → interaction-map → video kayıt → assets → spec → kod → QA
+
+## Kritik Animasyon Kuralı
+whileInView YASAK. useScrollReveal hook zorunlu. 'use client' zorunlu.

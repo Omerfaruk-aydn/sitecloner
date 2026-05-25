@@ -1,0 +1,16 @@
+# AI Website Cloner — Cursor Rules
+
+AGENTS.md dosyasını oku.
+
+Kullanıcı bir URL verdiğinde:
+1. .claude/commands/clone-website.md'yi oku
+2. Pipeline'ı baştan sona otomatik uygula
+3. Kullanıcıya hiçbir şey yaptırma
+
+Kod yazarken:
+- TypeScript strict, any yasak
+- Framer Motion animasyon için
+- Tailwind CSS v4 stil için
+- Next.js 15 App Router
+- Tüm görseller: next/image
+- Tüm fontlar: next/font/local

@@ -1,0 +1,15 @@
+## Aider Configuration — Site Clone AI
+
+# Model
+model: gpt-4o
+
+# Her oturumda AGENTS.md ve GEMINI.md oku
+read:
+  - AGENTS.md
+  - GEMINI.md
+
+# Auto commit
+auto-commits: false
+
+# Editör modu
+edit-format: diff

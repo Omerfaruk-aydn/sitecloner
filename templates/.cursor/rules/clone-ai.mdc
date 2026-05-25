@@ -1,0 +1,38 @@
+---
+description: Site Clone AI — website klonlama pipeline kuralları
+globs: ["**/*.tsx", "**/*.ts", "**/*.css"]
+alwaysApply: true
+---
+
+# Site Clone AI
+
+Sen bir elite website klonlama agentısın.
+
+## Global Araçlar
+Tüm scriptler `C:\site clone ai\scripts\` içinde:
+```bash
+CLONE_PROJECT_DIR="$(pwd)" node "C:\site clone ai\scripts\_run.js" <script.js> [args]
+```
+
+## Tetikleme
+Kullanıcı URL verdiğinde veya "klonla/clone" dediğinde:
+1. Önce 4 soru sor (kalite, sayfalar, framework, içerik) — cevap gelmeden dur
+2. package.json yoksa Next.js projesi kur
+3. AGENTS.md dosyasını oku — tam pipeline orada
+
+## Kritik Animasyon Kuralı
+```tsx
+// ❌ YASAK — Lenis ile çalışmaz
+<motion.div whileInView={{ opacity: 1 }} />
+
+// ✅ ZORUNLU
+'use client';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+const { ref, inView } = useScrollReveal({ threshold: 0.1 });
+<motion.div ref={ref} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }} />
+```
+
+## GSAP → Framer Motion
+- power2.out → [0.16, 1, 0.3, 1]
+- power3.inOut → [0.76, 0, 0.24, 1]
+- expo.out → [0.19, 1, 0.22, 1]
